@@ -6,10 +6,12 @@
   "scripts": {
     "start": "serve .",
     "clean": "rimraf dist",
-    "build": "npm run clean && babel src -d dist --copy-files",
+    "build": "webpack",
     "build:watch": "npm run build -- --watch"
   },
   "devDependencies": {
+    "babel-core": "^6.7.5",
+    "babel-loader": "^6.2.4",
     "babel-cli": "^6.16.0",
     "babel-eslint": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
@@ -23,7 +25,10 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.4.0",
     "rimraf": "^2.5.4",
-    "serve": "^1.4.0"
+    "serve": "^1.4.0",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.14"
   },
   "dependencies": {
     "react": "^15.3.2",
