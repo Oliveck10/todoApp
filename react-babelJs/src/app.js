@@ -76,3 +76,12 @@ class TodoApp extends React.Component {
     </section>
   }
 }
+
+class Header extends React.Component {
+  render() {
+    return <header className="header">
+      <h1>todos</h1>
+      <NewToDo insert={this.props.insert}/>
+    </header>
+  }
+}
