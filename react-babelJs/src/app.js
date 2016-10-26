@@ -100,3 +100,12 @@ class Main extends React.Component {
     </section>
   }
 }
+
+class ToggleAll extends React.Component {
+  render() {
+    return <div>
+      <input className="toggle-all" type="checkbox" onClick={this.props.toggleAll} checked={!!this.props.remain()[0] && !this.props.remain()[1]} />
+			<label htmlFor="toggle-all">Mark all as complete</label>
+    </div>
+  }
+}
