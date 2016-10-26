@@ -1,2 +1,2 @@
 # todoApp
-Kinds of practice implementing todoApp
+A couple of practice implementing todoApp
