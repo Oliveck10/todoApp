@@ -136,3 +136,13 @@ class ListItem extends React.Component {
       </div></li>
   }
 }
+
+class Footer extends React.Component {
+  render() {
+    let count = this.props.remain()[1];
+    return <footer className="footer">
+      <TodoCount remain={(count === 0) ? "No item left" : (count === 1) ? count + " item left" : count + " items left"} />
+      <ClearComplete clear={this.props.clear}/>
+    </footer>
+  }
+}
