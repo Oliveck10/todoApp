@@ -152,3 +152,11 @@ class TodoCount extends React.Component {
     return <span className="todo-count">{this.props.remain}</span>
   }
 }
+
+class ClearComplete extends React.Component {
+  render() {
+    return <button className="clear-completed" onClick={this.props.clear}>Clear completed</button>
+  }
+}
+
+export default TodoApp;
