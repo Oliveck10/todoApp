@@ -85,3 +85,9 @@ class Header extends React.Component {
     </header>
   }
 }
+
+class NewToDo extends React.Component {
+  render() {
+    return <input className="new-todo" placeholder="What needs to be done?" autoFocus onKeyDown={this.props.insert}/>
+  }
+}
