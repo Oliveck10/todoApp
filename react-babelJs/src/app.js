@@ -109,3 +109,19 @@ class ToggleAll extends React.Component {
     </div>
   }
 }
+
+class TodoList extends React.Component {
+  constructor() {
+    super();
+    this.mapItem = this.mapItem.bind(this);
+  }
+  mapItem(item) {
+    return <ListItem key={item.id} checked={item.checked} label={item.label} removed={item.removed}
+             toggle={this.props.genToggle(item.id)} remove={this.props.genRemove(item.id)}/>
+  }
+  render() {
+    return <ul className="todo-list">
+      { this.props.items.map(this.mapItem) }
+    </ul>
+  }
+}
