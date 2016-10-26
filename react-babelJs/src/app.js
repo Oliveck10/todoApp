@@ -91,3 +91,12 @@ class NewToDo extends React.Component {
     return <input className="new-todo" placeholder="What needs to be done?" autoFocus onKeyDown={this.props.insert}/>
   }
 }
+
+class Main extends React.Component {
+  render() {
+    return <section className="main">
+      <ToggleAll toggleAll={this.props.toggleAll} remain={this.props.remain}/>
+      <TodoList items={this.props.items} genToggle={this.props.genToggle} genRemove={this.props.genRemove} />
+    </section>
+  }
+}
