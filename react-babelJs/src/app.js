@@ -146,3 +146,9 @@ class Footer extends React.Component {
     </footer>
   }
 }
+
+class TodoCount extends React.Component {
+  render() {
+    return <span className="todo-count">{this.props.remain}</span>
+  }
+}
