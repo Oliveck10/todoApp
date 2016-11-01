@@ -1,4 +1,7 @@
 import React from 'react';
+import TodoCount from './countDisplay';
+import ListItem from './todoItem';
+
 
 class TodoApp extends React.Component {
   constructor() {
@@ -126,16 +129,16 @@ class TodoList extends React.Component {
   }
 }
 
-class ListItem extends React.Component {
-  render() {
-    return <li className={this.props.removed ? "removed": (this.props.checked ? "completed" : "")}>
-      <div className="view">
-        <input className="toggle" type="checkbox" checked={this.props.checked} onClick={this.props.toggle}/>
-        <label>{this.props.label}</label>
-        <button className="destroy" onClick={this.props.remove} ></button>
-      </div></li>
-  }
-}
+// class ListItem extends React.Component {
+//   render() {
+//     return <li className={this.props.removed ? "removed": (this.props.checked ? "completed" : "")}>
+//       <div className="view">
+//         <input className="toggle" type="checkbox" checked={this.props.checked} onClick={this.props.toggle}/>
+//         <label>{this.props.label}</label>
+//         <button className="destroy" onClick={this.props.remove} ></button>
+//       </div></li>
+//   }
+// }
 
 class Footer extends React.Component {
   render() {
@@ -147,11 +150,11 @@ class Footer extends React.Component {
   }
 }
 
-class TodoCount extends React.Component {
-  render() {
-    return <span className="todo-count">{this.props.remain}</span>
-  }
-}
+// class TodoCount extends React.Component {
+//   render() {
+//     return <span className="todo-count">{this.props.remain}</span>
+//   }
+// }
 
 class ClearComplete extends React.Component {
   render() {
